@@ -1,0 +1,28 @@
+@import '../colors.scss';
+@import '../variables.scss';
+$button-color : white;
+.button {
+  
+    padding: 5px 15px;
+    font-size: calc(0.6vw + 16px);
+    transition: all .2s;
+    border-radius: 4px;
+    box-shadow: $shadow ;
+    
+    
+}
+.button[data-variant='container'] {
+    background-color: $blue;
+    border : none;
+}
+.button[data-variant='outline'] {
+    background-color: transparent;
+    border: 1px solid $button-color ;
+}
+.button:hover {
+    cursor: pointer;
+}
+
+.button:active {
+   opacity: 0.8;
+}
