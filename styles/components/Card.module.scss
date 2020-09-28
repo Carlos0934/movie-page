@@ -1,0 +1,61 @@
+@import '../variables.scss';
+.card {
+    box-shadow: $shadow ;
+    max-width: 350px;
+    max-height: 600px;
+    border-radius: 4px;
+    opacity: .85;
+    transition: all .3s;
+    padding: 8px 16px;
+    background-image: linear-gradient(to right , $violet , $purple);
+}
+
+.card-content {
+    display: flex;
+ 
+    flex-direction: column;
+    padding-bottom: 10px;
+    align-items: center;
+   
+    button {
+        width: 100%;
+        background-image: linear-gradient(to right , $blue , $dark-blue);
+        font-weight: bold;
+        
+    }
+    img {
+        
+        width: 100%;
+        max-height: 250px;
+        border-radius: 4px;
+        object-fit: cover;
+    }
+    time  {
+      
+        font-size:  calc(.3vw + 14px);
+        color : white;
+        align-self: start;
+        margin-bottom: 16px;
+        opacity: 0.6;
+       
+    }
+}
+.description  {
+    margin: 10px;
+    font-size:  calc(.2vw + 18px);
+    color : white;
+    align-self: start;
+    opacity: 0.8;
+}
+
+.title {
+    letter-spacing: 1.4px;
+    margin: 16px;
+    font-size: calc(1vw + 24px);
+}
+
+
+.card:hover {
+    opacity: 1;
+    box-shadow: $shadow-higther;
+}
