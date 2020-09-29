@@ -1,4 +1,31 @@
 
-$responsive-sizes : ()
+$breakpoint-mobile: 620px;
+$breakpoint-tablet: 700px;
+$breakpoint-tv: 2000px;
+@mixin text-generator($size, $color, $shadow: false) {
+    font-size: $size;
+    color: $color;
+    @if $shadow {
+        text-shadow: 0 4 black;
+    }
+}
+
+@mixin responsive($breakpoint: "mobile") {
+    @if $breakpoint=="mobile" {
+        @media only screen and (max-width: $breakpoint-mobile) {
+            @content;
+        }
+    }
+    @if $breakpoint=="tablet" {
+        @media only screen and (max-width: $breakpoint-tablet) {
+            @content;
+        }
+    }
+    @if $breakpoint=="tv" {
+        @media only screen and (min-width: $breakpoint-tv) {
+            @content;
+        }
+    }
+}
 
 

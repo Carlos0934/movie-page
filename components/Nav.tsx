@@ -13,10 +13,8 @@ const NavBar : React.FC<NavBarProps> = ({routes , title}) => {
 
     return (
         <header className = {styles.header}>
-            <div className = {styles.menu}>
-                <input type = 'checkbox' id = 'menu' />
-                <label htmlFor = 'menu'><span className="material-icons">menu</span> </label>
-            </div>
+            <input type = 'checkbox' id = 'menu' />
+            <label className = {styles.menu} htmlFor = 'menu'><span className="material-icons">menu</span> </label>
             <h2 className = {styles.title}> <Link href = {routes[0].path}>{routes[0].label}</Link></h2>
             <nav className = {styles.navbar}>
             
@@ -28,6 +26,7 @@ const NavBar : React.FC<NavBarProps> = ({routes , title}) => {
                     }
                 </ul>
             </nav>
+           
         </header>
     )
 } 

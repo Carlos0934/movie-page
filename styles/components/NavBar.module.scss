@@ -1,11 +1,22 @@
-@import '../variables.scss';
+@import '../main.scss';
+
 .header {
-    
+    --header-height : 50px;
     box-shadow: $shadow;
     display: flex;
     align-items: center;
     width: 100%;
     padding-left: 1%;
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    input {
+        display: none;
+    }
     .navbar {
         li {
             opacity: .85;
@@ -17,42 +28,98 @@
             opacity: 1;
         }
     }
-  
-}
-.navbar {
    
-    padding: 0 15px;
-    width: 50%;
-    ul {
-        list-style: none;
-        display: flex;
-       
-        margin: 0;
-        padding: 0;
-      
-        
-        li {
-            display: block;
-            padding: 16px 20px;
-            flex-grow: 1;
+    .navbar {
+   
+        padding: 0 15px;
+        width: 50%;
+        ul {
+          
             
-            text-align: center;
+            li {
+                display: block;
+                padding: 16px 20px;
+                flex-grow: 1;
+                
+                text-align: center;
+               
+            }
            
         }
-       
+        @include responsive('mobile') {
+            padding: 0;
+            position: absolute;
+            width: 100%;
+            left: -100%;
+            top: var(--header-height);
+            z-index: 100;
+            background-image: linear-gradient(to right, $violet , darken($violet , 5));
+            box-shadow: $shadow;
+            transition: all .1s;
+            ul {
+                flex-direction: column;
+              
+                li {
+                    padding: 16px 0;
+                    border-bottom: 1px solid rgb(233, 233, 233);
+                }
+                li:hover {
+                    background-color: $dark-blue;
+                }
+            }
+        }
+    
+    }
+ 
+    
+    
+    
+    @include responsive('mobile') {
+        
+        height:  var(--header-height);
+        input:checked  ~ .navbar {
+           
+            left: 0;
+            margin: auto;
+           
+           
+        }
+        input:checked ~ .menu span {
+            opacity: 1;
+        } 
     }
 }
-
 
 .title {
    margin: 0;
    letter-spacing: 1px;
+   @include responsive('mobile') {
+        text-align: center;
+        width: 90%;
+       
+   }
   
 }
+
+
 .menu {
     display: none;
-    input  {
-        display: none;
-        
+
+    span {
+    
+        height: 100%;
+        font-size: 2rem;
+        opacity: 0.85;
+        transition: all .2s;
+    }
+    
+    span:hover {
+        opacity: 1;
+    }
+    @include responsive('mobile') {
+        display: block;
+       
+     
     }
 }
+

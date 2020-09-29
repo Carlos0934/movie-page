@@ -1,6 +1,7 @@
 
 import Button from '../components/Button'
 import Card from '../components/Card'
+import ContactForm from '../components/ContactForm'
 import NavBar from '../components/Nav'
 import {Route} from '../components/Nav'
 import styles from '../styles/Home.module.scss'
@@ -28,6 +29,7 @@ export default function Home() {
         <>
         <NavBar title = 'Movie Page' routes = {routes} />
         <main>
+            <ContactForm/>
              < p  > hello </p>
              <Button variant = 'container'>hola</Button>
             <Card  date = {new Date()}title = 'Title' description = 'description' price = {20} image = '/avengers.jpeg'/>
