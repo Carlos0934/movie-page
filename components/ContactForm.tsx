@@ -8,16 +8,16 @@ const ContactForm : React.FC = () => {
         <form>
            
             <div>
+                <input />
                 <label  >Name</label>   
-                <input />
             </div>
             <div>
-                <label >Email</label>   
                 <input type = 'email'/>
+                <label >Email</label>   
             </div>
             <div>
-                <label >Message</label>   
                 <input />
+                <label >Message</label>   
             </div>
 
             <Button>Send Email</Button>

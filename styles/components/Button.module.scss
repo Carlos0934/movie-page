@@ -21,6 +21,7 @@ $button-color : white;
 }
 .button:hover {
     cursor: pointer;
+    background-color: darken($blue, 5);
 }
 
 .button:active {
