@@ -1,0 +1,58 @@
+@import '../variables.scss';
+.header {
+    
+    box-shadow: $shadow;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 1%;
+    .navbar {
+        li {
+            opacity: .85;
+            transition: opacity .15s , background-color .2s ;
+            border-radius: 4px;
+        }
+        li:hover {
+            background-color: darken($blue , 5);
+            opacity: 1;
+        }
+    }
+  
+}
+.navbar {
+   
+    padding: 0 15px;
+    width: 50%;
+    ul {
+        list-style: none;
+        display: flex;
+       
+        margin: 0;
+        padding: 0;
+      
+        
+        li {
+            display: block;
+            padding: 16px 20px;
+            flex-grow: 1;
+            
+            text-align: center;
+           
+        }
+       
+    }
+}
+
+
+.title {
+   margin: 0;
+   letter-spacing: 1px;
+  
+}
+.menu {
+    display: none;
+    input  {
+        display: none;
+        
+    }
+}
