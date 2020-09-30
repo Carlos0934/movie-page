@@ -44,7 +44,9 @@
                 text-align: center;
                 a {
                     height: 100%;
-                   display: block;
+                    display: block;
+                    font-size: calc(.2vw + 14px);
+                    font-weight: 550;
                 }
             }
            

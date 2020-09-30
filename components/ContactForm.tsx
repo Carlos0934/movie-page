@@ -9,18 +9,18 @@ const ContactForm : React.FC = () => {
            
             <div>
                 <input placeholder = '' />
-                <label  >Name</label>   
+                <label>Name</label>   
             </div>
             <div>
                 <input placeholder = ''  type = 'email'/>
                 <label >Email</label>   
             </div>
             <div>
-                <textarea placeholder = ''  ></textarea>
-                <label >Message</label>   
+                <textarea placeholder = ''    ></textarea>
+              
             </div>
 
-            <Button>Send Email</Button>
+            <Button variant  = 'secondary'>Send Email</Button>
         </form>
     </div>
 }

@@ -4,24 +4,30 @@ $button-color : white;
 .button {
   
     padding: 5px 15px;
-    font-size: calc(0.4vw + 16px);
+    font-size: calc(0.2vw + 16px);
     transition: all .2s;
     border-radius: 4px;
     box-shadow: $shadow ;
-    
-    
-}
-.button[data-variant='container'] {
-    background-color: $blue;
     border : none;
-}
-.button[data-variant='outline'] {
-    background-color: transparent;
-    border: 1px solid $button-color ;
-}
-.button:hover {
     cursor: pointer;
+    
+}
+
+.button[data-variant='secondary'] {
+    background-color: $blue;
+   
+}
+.button[data-variant='primary'] {
+    background-color: $purple;
+    
+}
+.button[data-variant='secondary']:hover {
+    
     background-color: darken($blue, 5);
+}
+.button[data-variant='primary']:hover {
+    
+    background-color: darken($purple, 5);
 }
 
 .button:active {
