@@ -16,7 +16,7 @@ const ContactForm : React.FC = () => {
                 <label >Email</label>   
             </div>
             <div>
-                <input />
+                <textarea ></textarea>
                 <label >Message</label>   
             </div>
 
