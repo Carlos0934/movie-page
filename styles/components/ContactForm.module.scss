@@ -64,11 +64,14 @@
             
         }
         input:invalid + label {
-            color :rgb(238, 8, 8);
+            color :rgb(236, 73, 73);
         }
-        input:not([value=""])  + label , textarea:not([value=""])  + label {
+        input:not(:placeholder-shown)  + label,  textarea:not(:placeholder-shown)  + label {
             transform: translate(0,-60px);
+            
         }
+      
+      
     }
     button {
 

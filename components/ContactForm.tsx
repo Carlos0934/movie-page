@@ -8,15 +8,15 @@ const ContactForm : React.FC = () => {
         <form>
            
             <div>
-                <input />
+                <input placeholder = '' />
                 <label  >Name</label>   
             </div>
             <div>
-                <input type = 'email'/>
+                <input placeholder = ''  type = 'email'/>
                 <label >Email</label>   
             </div>
             <div>
-                <textarea ></textarea>
+                <textarea placeholder = ''  ></textarea>
                 <label >Message</label>   
             </div>
 

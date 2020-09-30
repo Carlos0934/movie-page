@@ -1,5 +1,6 @@
 import styles from '../styles/components/Navbar.module.scss'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 export interface Route {
     path : string
     label : string
@@ -10,7 +11,8 @@ interface NavBarProps {
     title : string
 }
 const NavBar : React.FC<NavBarProps> = ({routes , title}) => {
-
+    const router = useRouter()
+    
     return (
         <header className = {styles.header}>
             <input type = 'checkbox' id = 'menu' />
@@ -20,7 +22,7 @@ const NavBar : React.FC<NavBarProps> = ({routes , title}) => {
             
                 <ul>
                     {
-                        routes.slice(1).map((route , key) => <li key = {key}>
+                        routes.slice(1).map((route , key) => <li onClick = {() => router.push(route.path)} key = {key}>
                            <Link  href = {route.path}>{route.label}</Link>
                         </li>)
                     }

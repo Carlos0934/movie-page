@@ -7,8 +7,8 @@ const routes : Route[] = [
         label : 'Movie Page',
     },
     {
-        path : '/movies',
-        label : 'Movies',
+        path : '/',
+        label : 'Home'
     },
     {
         path : '/contact',
@@ -16,7 +16,7 @@ const routes : Route[] = [
     },
     {
         path : '/about',
-        label : 'About',
+        label : 'About Us',
     }
 ]
 const Layout : React.FC = ({children}) => {

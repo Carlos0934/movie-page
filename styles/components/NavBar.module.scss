@@ -37,12 +37,15 @@
           
             
             li {
-                display: block;
+                cursor: pointer;
                 padding: 16px 20px;
                 flex-grow: 1;
                 
                 text-align: center;
-               
+                a {
+                    height: 100%;
+                   display: block;
+                }
             }
            
         }
