@@ -8,6 +8,7 @@
     gap: 2rem;
     > div {
         justify-self: center;
+      
     }
     @include responsive('mobile') {
         gap: 3.5rem;

@@ -22,7 +22,7 @@ const routes : Route[] = [
 const Layout : React.FC = ({children}) => {
     return (
         <>
-            <NavBar title = 'Movie Page' routes = {routes} />
+            <NavBar routes = {routes} />
             <main className = {styles.layout}>
     {children}
     </main>

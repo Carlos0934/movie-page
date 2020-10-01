@@ -5,8 +5,7 @@ const AboutUs : React.FC = () => {
     return (
         <Layout>
             <section>
-                <h3></h3>
-                <img/>
+                <h3>About us</h3>
                 <p></p>
             </section>
         </Layout>

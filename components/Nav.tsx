@@ -8,9 +8,9 @@ export interface Route {
 }
 interface NavBarProps {
     routes : Route[]
-    title : string
+    
 }
-const NavBar : React.FC<NavBarProps> = ({routes , title}) => {
+const NavBar : React.FC<NavBarProps> = ({routes }) => {
     const router = useRouter()
     
     return (
