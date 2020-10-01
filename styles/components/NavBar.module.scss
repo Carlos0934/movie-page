@@ -55,7 +55,7 @@
             padding: 0;
             position: absolute;
             width: 100%;
-            left: -100%;
+            transform: translateX(-200%);
             top: var(--header-height);
             z-index: 100;
             background-image: linear-gradient(to right, $violet , darken($violet , 5));
@@ -84,7 +84,7 @@
         height:  var(--header-height);
         input:checked  ~ .navbar {
            
-            left: 0;
+            transform: translateX(-1%);
             margin: auto;
            
            

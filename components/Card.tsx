@@ -18,7 +18,7 @@ const Card : React.FC<CardProps> = ({movie}) => {
     return (
         <div className = {styles.card}>
             <div className = {styles['card-content']}>
-               
+                
                 <h3 className = {styles.title}>{title}</h3>
                 <div>
                     <img src = {image} />
