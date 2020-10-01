@@ -1,0 +1,12 @@
+@import '../main.scss';
+.contact {
+   
+    padding: 70px 0 ;
+    > div {
+        margin: auto;
+    }
+    
+    @include responsive('mobile') {
+        padding: 4vh 0;
+    }
+}

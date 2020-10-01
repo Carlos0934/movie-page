@@ -4,8 +4,7 @@ import styles from '../styles/components/Contact.module.scss'
 const Contact : React.FC = () => {
     return (
         <Layout>
-            <section>
-                <h3></h3>
+            <section className = {styles.contact}>
                 <ContactForm />
             </section> 
         </Layout>

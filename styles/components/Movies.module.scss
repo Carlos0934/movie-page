@@ -1,3 +1,16 @@
+@import '../main.scss';
+
 .movies {
-    
+ 
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax( 280px, 1fr));
+    width: 90%;
+    gap: 2rem;
+    > div {
+        justify-self: center;
+    }
+    @include responsive('mobile') {
+        gap: 3.5rem;
+        width: 100%;
+    }
 }

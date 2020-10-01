@@ -5,7 +5,6 @@ import Layout from '../components/Layout'
 import Movies from '../components/Movies'
 import styles from '../styles/components/Home.module.scss'
 
-
 export default function Home() {
     return (
         <Layout>
@@ -23,10 +22,8 @@ export default function Home() {
           </section>
           <section className = {styles.movies}>
             <h3>Movies</h3>
-            <div>
-              <Movies/>
-            </div>
-           
+          
+            <Movies/> 
           </section>
         </Layout>  
     )

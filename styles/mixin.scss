@@ -1,6 +1,6 @@
 
-$breakpoint-mobile: 620px;
-$breakpoint-tablet: 700px;
+$breakpoint-mobile: 630px;
+$breakpoint-tablet: 800px;
 $breakpoint-tv: 2000px;
 @mixin text-generator($size, $color, $shadow: false) {
     font-size: $size;

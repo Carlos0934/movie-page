@@ -4,7 +4,7 @@ import styles from '../styles/components/ContactForm.module.scss'
 const ContactForm : React.FC = () => {
 
     return <div className = {styles.form}>
-        <h4 className = {styles.title}>Contact form</h4>
+        <h4 className = {styles.title}>Contact Us</h4>
         <form>
            
             <div>

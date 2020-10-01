@@ -20,7 +20,10 @@ const Card : React.FC<CardProps> = ({movie}) => {
             <div className = {styles['card-content']}>
                
                 <h3 className = {styles.title}>{title}</h3>
-                <img src = {image} />
+                <div>
+                    <img src = {image} />
+                </div>
+            
             
                 <p className = {styles.description}>{description}</p>
                 <time className = {styles.description}>{formatDate}</time>

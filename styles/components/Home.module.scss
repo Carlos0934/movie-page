@@ -1,7 +1,57 @@
+@import '../main.scss';
 .presentation {
-
+   
+    min-height: 500px;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    padding: 100px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+    h1 {
+        font-size: calc(.3vw + 2rem);
+        line-height: 44px;
+    }
+    p {
+        font-size: calc(.2vw + 1rem);
+    }
+    > div {
+      
+        margin-top: 16px;
+        button {
+            margin: 0 16px;
+            padding: 10px 20px;
+            font-weight: 550;
+            @include responsive('mobile') {
+                margin: 16px 0;
+                width: 100%;
+            }
+        }
+    }
+    @include responsive('mobile') {
+        padding: 2vh;
+    }
 }
 
 .movies {
+    min-height: 500px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    padding: 5% 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h3 {
+        font-size: calc(.2vw + 1.5rem);
+    
+    }
+    div > {
+        
+    }
     
 }
