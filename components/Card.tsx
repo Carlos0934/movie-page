@@ -1,6 +1,7 @@
 import Button from "./Button"
 import styles from '../styles/components/Card.module.scss'
 import { useDateFormat } from "../src/hooks/useDateFormat"
+import { useState } from "react"
 
 export interface Movie {
     title : string
@@ -15,6 +16,19 @@ interface CardProps {
 const Card : React.FC<CardProps> = ({movie}) => {
     const {title , description , price , image , date} = movie
     const formatDate = useDateFormat(date)
+    const [paid , setPaid] = useState(false)
+    const handlePay = () => {
+        if(paid)
+            return
+        fetch('api/pay', {
+            method : 'POST',
+            body : JSON.stringify(movie)
+        })
+        .then((response) => {
+            
+            setPaid(response.status === 200)
+        })
+    }
     return (
         <div className = {styles.card}>
             <div className = {styles['card-content']}>
@@ -27,7 +41,9 @@ const Card : React.FC<CardProps> = ({movie}) => {
             
                 <p className = {styles.description}>{description}</p>
                 <time className = {styles.description}>{formatDate}</time>
-                <Button>Buy ${price}</Button>
+            <Button onClick = {handlePay}>{
+                paid ? 'bought' : `Buy ${price}$` 
+            }</Button>
             </div>
         </div>
     )
