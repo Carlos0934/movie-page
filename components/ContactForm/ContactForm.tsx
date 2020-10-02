@@ -1,5 +1,5 @@
-import Button from "./Button"
-import styles from '../styles/components/ContactForm.module.scss'
+import Button from "../Button/Button"
+import styles from './ContactForm.module.scss'
 import { useForm } from "react-hook-form"
 import { useState } from "react"
 

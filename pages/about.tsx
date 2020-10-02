@@ -1,5 +1,5 @@
-import Layout from "../components/Layout"
-import styles from '../styles/components/About.module.scss'
+import Layout from "../components/Layout/Layout"
+import styles from '../styles/pages/About.module.scss'
 
 const AboutUs : React.FC = () => {
     return (

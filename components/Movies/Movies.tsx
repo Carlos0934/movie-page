@@ -1,5 +1,5 @@
-import Card, { Movie } from "./Card"
-import styles from '../styles/components/Movies.module.scss'
+import Card, { Movie } from "../Card/Card"
+import styles from './Movies.module.scss'
 
 
 

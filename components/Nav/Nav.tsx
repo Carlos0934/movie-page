@@ -1,4 +1,4 @@
-import styles from '../styles/components/Navbar.module.scss'
+import styles from './Navbar.module.scss'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 export interface Route {

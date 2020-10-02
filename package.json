@@ -5,12 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "prestart": "next build",
     "start": "next start -p $PORT"
   },
   "dependencies": {
-    "@types/cors": "^2.8.7",
-    "cors": "^2.8.5",
     "next": "9.5.3",
     "paypal-rest-sdk": "^1.8.1",
     "react": "16.13.1",

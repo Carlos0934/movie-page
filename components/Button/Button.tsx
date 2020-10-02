@@ -1,4 +1,4 @@
-import styles from '../styles/components/Button.module.scss'
+import styles from './Button.module.scss'
 
 export type ButtonVariants = 'primary' | 'secondary'  
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {

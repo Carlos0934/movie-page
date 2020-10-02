@@ -1,6 +1,6 @@
 
-import styles from '../styles/components/Layout.module.scss'
-import NavBar, { Route } from './Nav'
+import styles from './Layout.module.scss'
+import NavBar, { Route } from '../Nav/Nav'
 const routes : Route[] = [
     {
         path : '/',

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '../styles/components/Success.module.scss'
+import styles from '../styles/pages/Success.module.scss'
 const Success : React.FC = () => {
     return (
         <section className = {styles.section}>

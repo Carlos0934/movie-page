@@ -1,9 +1,9 @@
 
 import Link from 'next/link'
-import Button from '../components/Button'
-import Layout from '../components/Layout'
-import Movies from '../components/Movies'
-import styles from '../styles/components/Home.module.scss'
+import Button from '../components/Button/Button'
+import Layout from '../components/Layout/Layout'
+import Movies from '../components/Movies/Movies'
+import styles from '../styles/pages/Home.module.scss'
 
 export default function Home() {
     return (

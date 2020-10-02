@@ -1,6 +1,6 @@
-import Button from "./Button"
-import styles from '../styles/components/Card.module.scss'
-import { useDateFormat } from "../src/hooks/useDateFormat"
+import Button from "../Button/Button"
+import styles from './Card.module.scss'
+import { useDateFormat } from "../../src/hooks/useDateFormat"
 import { useState } from "react"
 import { useRouter } from "next/router"
 

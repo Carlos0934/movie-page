@@ -1,5 +1,5 @@
 import paypal  from 'paypal-rest-sdk'
-import { Movie } from '../components/Card'
+import { Movie } from '../components/Card/Card'
 paypal.configure({
     mode : 'sandbox',
     client_id : process.env.CLIENT_ID,
