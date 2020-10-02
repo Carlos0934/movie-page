@@ -1,44 +1,76 @@
 import paypal  from 'paypal-rest-sdk'
 import { Movie } from '../components/Card'
+paypal.configure({
+    mode : 'sandbox',
+    client_id : process.env.CLIENT_ID,
+    client_secret : process.env.CLIENT_PAYPAL_SECRET
+})
+
+
 export class PayService {
     
-    constructor(private url) {
-        paypal.configure({
-            mode : 'sanbox',
-            client_id : process.env.CLIENT_ID,
-            client_secret : process.env.CLINET_SECRET
-        })
+    constructor() {
+        
     }
 
-    async PayMovie(movie : Movie) {
+    async payMovie ( paymentID : string , payerID : string) : Promise<paypal.PaymentResponse> {
+        const paymentData : paypal.payment.ExecuteRequest = {
+            payer_id : payerID,
+            
+            
+        }
+        return new Promise((resolve , reject) => {
+            paypal.payment.execute(paymentID , paymentData , (err , payment) => {
+                if(err) {
+                    reject(err)
+                } else {
+                    resolve(payment)
+                }
+               
+            })
+        })
+    }
+    async createMoviePayment(movie : Movie) : Promise<string> {
+      
         const payment = {
             "intent": "sale",
             "payer": {
                 "payment_method": "paypal"
             },
             "redirect_urls": {
-                "return_url": this.url,
-                "cancel_url": this.url
+                "return_url": 'http://localhost:3000/api/success',
+                "cancel_url": 'http://localhost:3000/'
             },
             "transactions": [{
                 "item_list": {
                     "items": [{
                         "name": movie.title,
-                        "sku": "item",
-                        "price":  movie.price,
+                        "sku": (Math.random() * 10000  ).toString(),
+                        "price":  movie.price.toString(),
                         "currency": "USD",
                         "quantity": 1
                     }]
                 },
                 "amount": {
                     "currency": "USD",
-                    "total": movie.price
+                    "total": movie.price.toString()
                 },
                 "description": movie.description
             }]
         } 
-        paypal.payment.create( payment , (response) => {
-            
+        return new Promise((resolve , reject) => {
+            paypal.payment.create( payment , (err , response) => {
+                
+                if(err) {
+                    reject(err)
+                    return
+                }
+                for(const link of response.links) {
+                    if(link.rel === 'approval_url' ) {
+                        resolve(link.href)
+                    }
+                }
+            })
         })
                
     }

@@ -2,6 +2,7 @@ import Button from "./Button"
 import styles from '../styles/components/Card.module.scss'
 import { useDateFormat } from "../src/hooks/useDateFormat"
 import { useState } from "react"
+import { useRouter } from "next/router"
 
 export interface Movie {
     title : string
@@ -17,16 +18,18 @@ const Card : React.FC<CardProps> = ({movie}) => {
     const {title , description , price , image , date} = movie
     const formatDate = useDateFormat(date)
     const [paid , setPaid] = useState(false)
+    const router = useRouter()
+    
     const handlePay = () => {
         if(paid)
             return
-        fetch('api/pay', {
+        fetch('api/pay/', {
             method : 'POST',
             body : JSON.stringify(movie)
         })
-        .then((response) => {
-            
-            setPaid(response.status === 200)
+        .then((response) => response.json())
+        .then(({link})=> {
+            window.open(link , '_self')
         })
     }
     return (

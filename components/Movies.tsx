@@ -38,7 +38,7 @@ const Movies : React.FC = () => {
     return (
         <div  className = {styles.movies}>
             {
-                movies.map(movie => <Card movie = {movie}/>)
+                movies.map((movie , key) => <Card key = {key} movie = {movie}/>)
             }
         </div>
     )

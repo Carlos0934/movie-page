@@ -1,0 +1,43 @@
+@import '../main.scss';
+@keyframes fade {
+    0% {
+       opacity: 0;
+    }
+    25% {
+        opacity: .1;
+    }
+    50% {
+        opacity: 1;
+        color: gray;
+        background-color: transparent;
+    }
+    100% {
+        
+        color: rgb(27, 179, 27);
+        background-color: white;
+    }
+}
+.section {
+    padding-top: 10%;
+    text-align: center;
+    h1 {
+        font-size: calc(1vw  + 1.5rem);
+    }
+    span {
+        animation: fade 1s ;
+        font-size: calc(1vw  + 10rem);
+        color: rgb(27, 179, 27);
+        background-color: white;
+        border-radius: 50%;
+       
+    }
+    h2 {
+        font-size: calc(1vw  + 1rem);
+        opacity: .8;
+        transition: all ease-in .2s;
+    }
+    h2:hover {
+        opacity: 1;
+    }
+   
+}
